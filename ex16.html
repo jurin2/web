@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .photos{
+            width: 520px;
+            margin: 0 auto;
+            border: 10px solid black;
+            padding: 20px;
+        }
+        .img-box{
+            width: 100px;
+            margin-right: 20px;
+            float: left;
+        }
+        .photo04,.photo08{
+            margin-right: 0;
+        }
+        .photo01,.photo02,.photo03,.photo04{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="photos clearfix">
+        <div class="img-box photo01"><img src="./images/christmas04.jpg" alt="이미지"></div>
+        <div class="img-box photo02"><img src="./images/christmas02.jpg" alt="이미지"></div>
+        <div class="img-box photo03"><img src="./images/christmas03.jpg" alt="이미지"></div>
+        <div class="img-box photo04"><img src="./images/christmas04.jpg" alt="이미지"></div>
+        <div class="img-box photo05"><img src="./images/christmas05.jpg" alt="이미지"></div>
+        <div class="img-box photo06"><img src="./images/christmas04.jpg" alt="이미지"></div>
+        <div class="img-box photo07"><img src="./images/christmas02.jpg" alt="이미지"></div>
+        <div class="img-box photo08"><img src="./images/christmas03.jpg" alt="이미지"></div>
+    </div>
+</body>
+</html>

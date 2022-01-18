@@ -10,9 +10,21 @@
             width: 100%;
         }
         .box{
+            position: relative;
             width: 500px;
-            margin: 100px auto;
+            height: 500px;
+            margin: 0 auto;
             border: 2px solid black;
+        }
+        .img-box{
+            width: 200px;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transition: transform 0.3s;
+        }
+        .box:hover .img-box{
+            transform: translate(50%,-50%) scale(1.5);
         }
     </style>
 </head>
