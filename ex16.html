@@ -21,21 +21,29 @@
             vertical-align: top;
         }
         .photos{
-            width: 520px;
+            width: 410px;
             margin: 0 auto;
-            border: 10px solid black;
-            padding: 20px;
+            padding: 2px;
+            background-color: #ccc;
         }
         .img-box{
             width: 100px;
-            margin-right: 20px;
+            margin-right: 2px;
             float: left;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+        .img-box img{
+            transition: 0.3s;
+        }
+        .img-box:hover img{
+            transform: scale(1.2);
         }
         .photo04,.photo08{
             margin-right: 0;
         }
         .photo01,.photo02,.photo03,.photo04{
-            margin-bottom: 20px;
+            margin-bottom: 2px;
         }
     </style>
 </head>
