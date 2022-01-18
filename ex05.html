@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul,ol,li{
+            list-style: none;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-size: 1em;
+            font-weight: 400;
+        }
+        .container{
+            margin: 0 16px;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .wrap{
+            width: 100vw;
+            overflow: hidden;
+        }
+        .wrap>*{
+            padding: 9.5px 0;
+        }
+        .header{
+            background-color: rgba(255,0,0,0.2);
+        }
+        .header h1{
+            float: left;
+        }
+        .header nav{
+            float: right;
+        }
+        .header nav li{
+            float: left;
+            margin-left: 10px;
+        }
+        .slider{
+            padding: 0 !important;
+            background-color: rgba(0,255,0,0.2);
+        }
+        .slider .container{
+            margin: 0;
+        }
+        .my-info{
+            background-color: rgba(0,0,255,0.2);
+        }
+      
+        .my-photos{
+            background-color: rgba(255,255,0,0.2);
+        }
+      
+        .footer{
+            background-color: rgba(255,0,255,0.2);
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <div class="container clearfix">
+                <h1>hong profile</h1>
+                <nav>
+                    <ul class="clearfix">
+                        <li>about</li>
+                        <li>history</li>
+                        <li>photo</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="section sec01 slider">
+            <div class="container">
+                slider
+            </div>
+        </section>
+        <section class="section sec02 my-info">
+            <div class="container">
+                잉?!
+            </div>
+        </section>
+        <section class="section sec03 my-photos">
+            <div class="container">
+                내사진
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                footer
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header{
+            padding: 16px 0;
+            text-align: center;
+            background-color: red;
+        }
+        nav{
+            padding: 10px;
+            text-align: center;
+            background-color: green;
+        }
+        .sec{
+            padding: 100px;
+            text-align: center;  
+        }
+        .sec01{
+            background-color: blue;
+            float: left;
+            width: 50%;
+        }
+        .sec02{
+            background-color: blueviolet;
+            float: left;
+            width: 50%;
+        }
+        footer{
+            padding: 20px 0;
+            background-color: cyan;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header>header</header>
+        <nav>nav</nav>
+        <div class="clearfix">
+            <section class="sec sec01">sec01</section>
+            <section class="sec sec02">sec02</section>
+        </div>
+        <footer>footer</footer>
+    </section>
+</body>
+</html>
