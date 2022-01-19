@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <style>
+        .box{
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+        }
+      .big-circle,.img-box,.sm-circle{
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          border-radius: 50%;
+          background-color: #ccc;
+        }
+        .big02{
+            border:70px solid #8df7c1;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+        }
+        .img-box{
+            left: 4px;
+            right: 4px;
+            top: 4px;
+            bottom: 4px;
+            overflow: hidden;
+        }
+        .img-box img{
+            transform: scale(2);
+        }
+        .sm-circle{
+            left: auto;
+            top: auto;
+            right: 11px;
+            bottom: 9px;
+            width: 24px;
+            height: 24px;
+            background-color: #ff053a;
+            background-clip: padding-box;
+            border: 2px solid rgba(255,5,58,0.2);
+            color: #fff;
+            font-size: 7px;
+            text-align: center;
+            font-family:'Noto Sans KR';
+            font-weight:300;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="big-circle big01"></div>
+        <div class="big-circle big02"></div>
+        <div class="img-box">
+            <img src="./images/bic-circle.jpg" alt="이미지">
+        </div>
+        <div class="sm-circle">50%</div>
+    </div>
+</body>
+</html>
