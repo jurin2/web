@@ -214,10 +214,10 @@
         </section>
         <footer class="footer">
             <ul>
-                <li id="theme01">1</li>
-                <li id="theme02">2</li>
-                <li id="theme03">3</li>
-                <li id="theme04">4</li>
+                <li class="btn-theme" id="theme01">1</li>
+                <li class="btn-theme" id="theme02">2</li>
+                <li class="btn-theme" id="theme03">3</li>
+                <li class="btn-theme" id="theme04">4</li>
             </ul>
         </footer>
     </section>
@@ -225,38 +225,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        $('#theme01').on({
+        let target = $('.wrap');
+        $('.btn-theme').on({
             'click':function(){
-                $('.wrap').removeClass('theme02');
-                $('.wrap').removeClass('theme03');
-                $('.wrap').removeClass('theme04');
-                $('.wrap').addClass('theme01');
+                let thisId = $(this).attr('id');
+                target.removeClass('theme01 theme02 theme03 theme04');
+                target.addClass(thisId);
+                let imgNum = thisId[thisId.length-1];
+                console.log(imgNum);
+                $('img').attr('src','./images/theme0' + imgNum + '.jpg');
             }
         })
-        $('#theme02').on({
-            'click':function(){
-                $('.wrap').removeClass('theme01');
-                $('.wrap').removeClass('theme03');
-                $('.wrap').removeClass('theme04');
-                $('.wrap').addClass('theme02');
-            }
-        })
-        $('#theme03').on({
-            'click':function(){
-                $('.wrap').removeClass('theme01');
-                $('.wrap').removeClass('theme02');
-                $('.wrap').removeClass('theme04');
-                $('.wrap').addClass('theme03');
-            }
-        })
-        $('#theme04').on({
-            'click':function(){
-                $('.wrap').removeClass('theme01');
-                $('.wrap').removeClass('theme02');
-                $('.wrap').removeClass('theme03');
-                $('.wrap').addClass('theme04');
-            }
-        })
+        let now = new Date();
+        console.log(now);
+        let nowHour = now.getHours();
+        console.log(nowHour);
+
     </script>
 </body>
 </html>
