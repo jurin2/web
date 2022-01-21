@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <title>Profile</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+            vertical-align: top;
+        }
+        ul,ol,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color:inherit;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-weight: 400;
+            font-size: 1em;
+        }
+        :root{
+            font-family: 'Orbitron', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+        }
+        body{
+            background-color: #c1e2e2;
+        }
+        .wrap{
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 50px 45px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 10px 10px 30px 0 rgba(0,0,0,0.1);
+        }
+        .header ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        .header a{
+            font-size: 1.6em;
+        }
+        .profile{
+            margin-bottom: 60px;
+        }
+        .profile .img-profile{
+            overflow: hidden;
+            width: 69.76744186046512%;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.5);
+        }
+        h1{
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 2em;
+            text-transform: uppercase;
+            text-align: center;
+            color: #555;
+        }
+        h2{
+            margin-bottom: 62px;
+            font-family: sans-serif;
+            font-size: 1.2em;
+            text-align: center;
+            text-transform: uppercase; 
+            color: #bbb;
+        }
+        .btn-view{
+            width: 62.7906976744186%;
+            margin: 0 auto;
+            padding: 14px 0;
+            border: none;
+            border-radius: 24px;
+            background-color: #35e0f7;
+            box-shadow: 5px 20px 30px 0 rgba(53, 224, 247, 0.5);
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 0.9em;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .contact{
+            margin-bottom: 20px;
+        }
+        .contact li{
+            padding: 20px;
+            font-size: 1.2em;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+        }
+        .contact li i{
+            flex: 4;
+        }
+        .contact li::after{
+            content: '';
+            display: block;
+            flex: 1;
+        }
+        .contact li.facebook{
+            border-bottom: 1px solid #ddd;
+        }
+        .footer ul{
+            display: flex;
+            flex-wrap: row nowrap;
+            justify-content: space-evenly;
+        }
+        .footer ul li{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #35e0f7;
+            box-shadow: 5px 5px 5px rgba(53, 224, 247, 0.5);
+            text-indent: -999999px;
+            cursor: pointer;
+        }
+        .footer ul li:nth-child(2){
+            background-color: #c9f6eb;
+            box-shadow: 5px 5px 5px rgba(201, 246, 235, 0.5);
+        }
+        .footer ul li:nth-child(3){
+            background-color: #f3cfea;
+            box-shadow: 5px 5px 5px rgba(243, 207, 234, 0.5);
+        }
+        .footer ul li:nth-child(4){
+            background-color: #dad5f2;
+            box-shadow: 5px 5px 5px rgba(218, 213, 242, 0.5);
+        }
+        
+        .wrap.theme01 .img-profile{
+            box-shadow: 5px 5px 5px rgba(53, 224, 247, 0.5);
+        }
+        .wrap.theme01 .btn-view{
+            background-color: #35e0f7;
+            box-shadow: 5px 20px 30px 0 rgba(53, 224, 247, 0.5);
+        }
+        .wrap.theme02 .img-profile{
+            box-shadow: 5px 5px 5px rgba(201, 246, 235, 0.5);
+        }
+        .wrap.theme02 .btn-view{
+            background-color: #c9f6eb;
+            box-shadow: 5px 20px 30px 0 rgba(201, 246, 235, 0.5);
+        }
+        .wrap.theme03 .img-profile{
+            box-shadow: 5px 5px 5px rgba(243, 207, 234, 0.5);
+        }
+        .wrap.theme03 .btn-view{
+            background-color: #f3cfea;
+            box-shadow: 5px 20px 30px 0 rgba(243, 207, 234, 0.5);
+        }
+        .wrap.theme04 .img-profile{
+            box-shadow: 5px 5px 5px rgba(218, 213, 242, 0.5);
+        }
+        .wrap.theme04 .btn-view{
+            background-color: #dad5f2;
+            box-shadow: 5px 20px 30px 0 rgba(218, 213, 242, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap theme01">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li class="btn-nav"><a href="#"><i class="fas fa-bars"></i></a></li>
+                    <li class="btn-new"><a href="#"><i class="far fa-sticky-note"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="sec profile">
+            <div class="img-box img-profile">
+                <img src="./images/profile.jpg" alt="프로필 이미지">
+            </div>
+            <h1>
+                <a href="./profile01.html">dcodelab</a>   
+            </h1>
+            <h2>Ui/ux interactive developer</h2>
+            <div class="btn-view">view more</div>
+        </section>
+        <section class="sec contact">
+            <ul>
+                <li class="facebook">
+                    <i class="fab fa-facebook-f"></i> 
+                    <a href="#">visit my facebook page.</a>
+                </li>
+                <li class="email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="#">hadaboni80@naver.com</a>
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <ul>
+                <li id="theme01">1</li>
+                <li id="theme02">2</li>
+                <li id="theme03">3</li>
+                <li id="theme04">4</li>
+            </ul>
+        </footer>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('#theme01').on({
+            'click':function(){
+                $('.wrap').removeClass('theme02');
+                $('.wrap').removeClass('theme03');
+                $('.wrap').removeClass('theme04');
+                $('.wrap').addClass('theme01');
+            }
+        })
+        $('#theme02').on({
+            'click':function(){
+                $('.wrap').removeClass('theme01');
+                $('.wrap').removeClass('theme03');
+                $('.wrap').removeClass('theme04');
+                $('.wrap').addClass('theme02');
+            }
+        })
+        $('#theme03').on({
+            'click':function(){
+                $('.wrap').removeClass('theme01');
+                $('.wrap').removeClass('theme02');
+                $('.wrap').removeClass('theme04');
+                $('.wrap').addClass('theme03');
+            }
+        })
+        $('#theme04').on({
+            'click':function(){
+                $('.wrap').removeClass('theme01');
+                $('.wrap').removeClass('theme02');
+                $('.wrap').removeClass('theme03');
+                $('.wrap').addClass('theme04');
+            }
+        })
+    </script>
+</body>
+</html>

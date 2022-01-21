@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 변수, 함수</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --main-color:#ff0000;
+            --sub-color:#ff4444;
+            --txt-color:#666;
+            --ba-height:100px;
+        }
+
+        header{
+            height: 100px;
+            background-color: var(--main-color);
+        }
+        section{
+            height: calc(var(--ba-height) * 6);
+            background-color: var(--sub-color);
+        }
+        footer{
+            height: calc(var(--ba-height) * 1.5);
+            background-color: var(--txt-color);
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>section</section>
+    <footer>footer</footer>
+</body>
+</html>
